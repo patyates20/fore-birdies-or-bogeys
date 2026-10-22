@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Pat & Sandy · Carlsbad wedding + Austin</title>
+<title>Pat &amp; Sandy · Carlsbad wedding + Austin</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
@@ -45,7 +45,7 @@ header.hero{padding:28px 0 8px}
 .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,8vw,52px);line-height:1.02;margin:0 0 10px;letter-spacing:-.01em}
 .hero p{margin:0;color:var(--muted);font-size:16px}
 
-/* The memorable element: day stripes, like the rows at the Flower Fields */
+/* Day stripes, like the rows at the Flower Fields */
 nav.fields{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:14px 0 12px;margin:0 -18px;padding-left:18px;padding-right:18px}
 .fields ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
 .fields a{display:flex;flex-direction:column;justify-content:flex-end;height:54px;border-radius:6px;padding:6px 7px;text-decoration:none;color:#fff;background:var(--c);position:relative;overflow:hidden}
@@ -54,6 +54,7 @@ nav.fields{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background
 .fields .n{font-family:var(--serif);font-size:22px;line-height:1}
 .fields a[aria-current="true"]{outline:3px solid var(--ink);outline-offset:2px}
 .fields a:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.fields a .cam{position:absolute;top:5px;right:6px;width:7px;height:7px;border-radius:50%;background:#fff;opacity:.95}
 
 .next{margin:18px 0 6px;background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--nc,var(--ocean));border-radius:10px;padding:14px 16px}
 .next .k{font-size:13px;color:var(--muted);margin:0 0 2px}
@@ -64,7 +65,7 @@ nav.fields{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background
 .alert strong{font-weight:600}
 
 section.day{margin-top:34px}
-.day-head{display:flex;align-items:baseline;gap:12px;border-bottom:4px solid var(--c);padding-bottom:8px;margin-bottom:6px}
+.day-head{display:flex;align-items:baseline;gap:12px;border-bottom:4px solid var(--c);padding-bottom:8px;margin-bottom:6px;flex-wrap:wrap}
 .day-head h2{font-family:var(--serif);font-weight:400;font-size:30px;margin:0;line-height:1}
 .day-head .where{color:var(--muted);font-size:15px}
 .stay{font-size:14px;color:var(--muted);margin:8px 0 4px}
@@ -84,15 +85,53 @@ li.item.big h3{font-family:var(--serif);font-weight:400;font-size:24px}
 li.item.is-next .time{color:var(--c)}
 li.item.is-past{opacity:.55}
 .flag{color:var(--warn-ink);background:var(--warn-bg);border-radius:6px;padding:1px 6px;font-size:13px;font-weight:500;margin-left:4px;white-space:nowrap}
+.add{color:var(--c);border:1px solid var(--c);border-radius:6px;padding:0 6px;font-size:12px;font-weight:600;margin-left:6px;white-space:nowrap;letter-spacing:.02em;vertical-align:2px}
+
+.dayhook{margin:12px 0 4px;background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:10px;padding:12px 14px}
+.dayhook .k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--c);margin:0 0 2px}
+.dayhook .t{font-family:var(--serif);font-size:22px;line-height:1.15;margin:0}
+.dayhook .s{margin:6px 0 0;color:var(--muted);font-size:14.5px}
+.dayhook .cams{margin:8px 0 0;font-size:13.5px}
+details.kit b{font-weight:600}
+/* Social layer */
+.shot{margin:8px 0 0;font-size:14px;line-height:1.45;border-left:3px solid var(--c);padding:2px 0 2px 10px}
+.shot b{font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--c);display:block}
+.quiet{margin:10px 0 0;font-size:14.5px;color:var(--muted);font-style:italic}
+
+.social{margin-top:22px}
+.social-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:0 0 10px}
+.social-head h3{font-family:var(--serif);font-weight:400;font-size:22px;margin:0}
+.social-head span{font-size:13px;color:var(--muted)}
+.post{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:10px;padding:14px 16px;margin:0 0 12px}
+.post .top{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline;margin:0 0 4px}
+.post .fmt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--c)}
+.post .when{font-size:13px;color:var(--muted)}
+.post h4{margin:0 0 6px;font-size:18px;font-weight:600;line-height:1.3}
+.post .hook{margin:0 0 8px;font-size:15px}
+.post .hook i{color:var(--muted);font-style:normal;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-right:6px}
+.post ol,.post ul{margin:6px 0 10px;padding-left:20px;font-size:14.5px}
+.post li{margin:2px 0}
+.post .lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:10px 0 2px;font-weight:600}
+.post .cap{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:15px;margin:0}
+.post .tags{color:var(--muted);font-size:14px;margin:6px 0 0}
+.post button{margin-top:10px;font:inherit;font-size:14px;font-weight:500;padding:7px 14px;border-radius:8px;border:1px solid var(--c);background:transparent;color:var(--c);cursor:pointer}
+.post button:hover{background:color-mix(in srgb, var(--c) 10%, transparent)}
+
+details.kit{margin:18px 0 0;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+details.kit summary{cursor:pointer;font-weight:600}
+details.kit summary span{font-weight:400;color:var(--muted);font-size:14px;margin-left:6px}
+details.kit ul{margin:10px 0 2px;padding-left:20px;font-size:15px}
+details.kit li{margin:3px 0}
 
 footer{margin-top:40px;color:var(--muted);font-size:13.5px}
+@media (max-width:420px){li.item{grid-template-columns:72px 1fr;gap:10px}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="hero">
     <h1>Pat &amp; Sandy, west and back</h1>
-    <p>Ethan’s wedding in Carlsbad, a golf weekend, then Amplify in Austin. Oct 22–28. Every time is shown in the local time where you’ll be.</p>
+    <p>Ethan’s wedding in Carlsbad, a golf weekend, then Amplify in Austin. Oct 22–28. Every time is shown in the local time where you’ll be. Saturday and Sunday carry the Fore Birdies or Bogeys plan, run the Dallas way: a hook for the day, what to get at each stop, the posts at the bottom.</p>
   </header>
 
   <nav class="fields" aria-label="Trip days">
@@ -105,10 +144,23 @@ footer{margin-top:40px;color:var(--muted);font-size:13.5px}
     <p class="s" id="nextS"></p>
   </div>
 
+  <details class="kit">
+    <summary>Field manual for the weekend <span>same rules as Dallas</span></summary>
+    <ul>
+      <li><b>The five rules.</b> Shoot the arrival. Sandy reacts first and is never briefed. Every place ends in a spoken verdict, every town in the Two-Day Rule. Ten-second static wide everywhere. One hole-in-the-wall a day, walked into cold.</li>
+      <li><b>Saturday pairing:</b> Action 6 on the cart, Pocket 3 in hand. <b>Sunday is walking:</b> Pocket 3 in hand, Action 6 clipped to the bag. Phone for stills and every thumbnail, both days.</li>
+      <li><b>Drone stays in the bag all weekend.</b> Coronado sits beside NAS North Island and under the airport, the Gliderport is live airspace, and Torrey Pines and the reserve next door won’t say yes on a Sunday. Assume no and don’t ask.</li>
+      <li>Everything on 4K30. 1080p240 on the phone for the putt drop only.</li>
+      <li>Mic on whoever’s talking, furry windscreen on, always. It’s the coast and the wind eats a bare lav.</li>
+      <li>Short clips, 10 to 60 seconds, one idea each.</li>
+      <li>Money is off the table. No prices on screen or in captions.</li>
+      <li>Nightly, both nights: dump every card that rolled, charge every battery that rolled, post one thing before bed.</li>
+    </ul>
+  </details>
 
   <main id="days"></main>
 
-  <footer>Built from your confirmations and calendar. Golf and activity end times are estimates.</footer>
+  <footer>Built from your confirmations and calendar. Golf and activity end times are estimates. Items marked Add are suggestions layered in for the weekend, not bookings. Play loud. Stay married.</footer>
 </div>
 
 <script>
@@ -116,36 +168,113 @@ const maps = q => "https://www.google.com/maps/search/?api=1&query=" + encodeURI
 
 const DAYS = [
  {id:"thu", dow:"Thu", n:"22", title:"Thursday, Oct 22", where:"Louisville to Carlsbad", c:"--slate",
+  quiet:"Tonight, ten minutes: charge everything, clear the cards, test the mic in the hotel lot. Nothing gets filmed.",
   stay:["Fairfield by Marriott Carlsbad", "1929 Palomar Oaks Way, Carlsbad · Oct 22–25 · #7K15Z12AO7"],
   items:[
    {t:"10:39am", z:"ET", at:"2026-10-22T10:39:00-04:00", h:"Delta DL5101, Louisville → Detroit", m:"Arrives 12:04pm ET, McNamara Terminal · CRJ-700 · Main Basic"},
    {t:"12:35pm", z:"ET", at:"2026-10-22T12:35:00-04:00", h:"Delta DL761, Detroit → San Diego", m:"Arrives 2:20pm PT, Terminal 2 · A321 · 31 min connection"},
    {t:"2:40pm", z:"PT", at:"2026-10-22T14:40:00-07:00", h:"Pick up rental car at SAN", m:"Midsize SUV, Nissan Rogue or similar · Driver: Sandra · 4 days, unlimited miles · Est. $601.14 at the counter · shuttle from Terminal 2", q:"San Diego International Airport Rental Car Center"},
-   {t:"3:00pm", z:"PT", at:"2026-10-22T15:00:00-07:00", h:"Check in at Fairfield Carlsbad", m:"1 King · free breakfast · parking $14/day", conf:"#7K15Z12AO7", q:"1929 Palomar Oaks Way, Carlsbad, CA 92011"}
+   {t:"3:00pm", z:"PT", at:"2026-10-22T15:00:00-07:00", h:"Check in at Fairfield Carlsbad", m:"1 King · free breakfast · parking $14/day", q:"Fairfield by Marriott Carlsbad, 1929 Palomar Oaks Way, Carlsbad", conf:"#7K15Z12AO7"}
   ]},
  {id:"fri", dow:"Fri", n:"23", title:"Friday, Oct 23", where:"Carlsbad", c:"--coral",
+  quiet:"Camera down. One shot of the two of you walking in dressed, then nothing. It’s Ethan’s day, and nothing from the wedding goes up unless he and his bride post first.",
   items:[
-   {t:"4:00pm", z:"PT", at:"2026-10-23T16:00:00-07:00", end:"2026-10-23T23:00:00-07:00", big:true, h:"Ethan’s wedding", m:"The Flower Fields, 5704 Paseo Del Norte, Carlsbad · until about 11pm · 5–10 min from the hotel", q:"The Flower Fields, 5704 Paseo Del Norte, Carlsbad, CA 92008"}
+   {t:"4:00pm", z:"PT", at:"2026-10-23T16:00:00-07:00", end:"2026-10-23T23:00:00-07:00", h:"Ethan’s wedding", m:"The Flower Fields, 5704 Paseo Del Norte, Carlsbad · until about 11pm · 5–10 min from the hotel", q:"The Flower Fields, 5704 Paseo Del Norte, Carlsbad", big:true}
   ]},
- {id:"sat", dow:"Sat", n:"24", title:"Saturday, Oct 24", where:"Carlsbad, Rancho Bernardo, Coronado", c:"--marigold",
+ {id:"sat", dow:"Sat", n:"24", title:"Saturday, Oct 24", where:"Carlsbad, Rancho Bernardo, Coronado", c:"--marigold", social:true,
+  hook:"Danced until 11. Tee time at 12:20.",
+  hookNote:"The day after the wedding is the story. Two people, 36 years in, a golf course and a sunset, and nobody slept enough.",
+  cams:"Action 6 on the cart · Pocket 3 in hand · phone for stills · drone in the bag",
   items:[
-   {t:"8:30am", z:"PT", at:"2026-10-24T08:30:00-07:00", h:"Breakfast burritos at Lola’s", m:"3292 Roosevelt St, Carlsbad · opens 8am", q:"Lola's 7 Up Market & Deli, 3292 Roosevelt St, Carlsbad, CA"},
-   {t:"9:30am", z:"PT", at:"2026-10-24T09:30:00-07:00", h:"Carlsbad seawall walk", m:"Start at Tamarack Ave & Carlsbad Blvd, head north toward the Village", q:"Tamarack Surf Beach, Carlsbad, CA"},
-   {t:"12:20pm", z:"PT", at:"2026-10-24T12:20:00-07:00", big:true, h:"Golf at the Country Club of Rancho Bernardo", m:"12280 Greens East Rd, San Diego · guest fees $130 each · 858-487-1134", q:"The Country Club of Rancho Bernardo, 12280 Greens East Rd, San Diego, CA 92128"},
-   {t:"5:45pm", z:"PT", at:"2026-10-24T17:45:00-07:00", h:"Coronado at sunset", m:"Hotel del Coronado grounds and beach, 1500 Orange Ave · sunset around 6", q:"Hotel del Coronado, 1500 Orange Ave, Coronado, CA 92118"},
-   {t:"8:00pm", z:"PT", at:"2026-10-24T20:00:00-07:00", h:"Dinner at Island Prime", m:"880 Harbor Island Dr, San Diego · party of 2, standard seating · 619-298-6802", conf:"Confirmed", q:"Island Prime, 880 Harbor Island Dr, San Diego, CA 92101"}
+   {t:"8:30am", z:"PT", at:"2026-10-24T08:30:00-07:00", h:"Breakfast burritos at Lola’s", m:"3292 Roosevelt St, Carlsbad · opens 8am", q:"Lola's 7 Up Market, 3292 Roosevelt St, Carlsbad",
+    shot:"Hole-in-the-wall of the day. Roll from the lot: exterior, the door, first ten seconds inside. Ask the counter on camera, “where do you eat on your day off?” Ask before filming inside. Story 1."},
+   {t:"9:30am", z:"PT", at:"2026-10-24T09:30:00-07:00", h:"Carlsbad seawall walk", m:"Start at Tamarack Ave & Carlsbad Blvd, head north toward the Village", q:"Tamarack Ave and Carlsbad Blvd, Carlsbad",
+    shot:"Ten-second static wide on the wall, horizon level. Two-Day Rule for Carlsbad on the Pocket 3, walking: three things, Sandy picks first. Story 2, then the poll."},
+   {t:"10:45am", z:"PT", at:"2026-10-24T10:45:00-07:00", h:"Coffee to go at Steady State Roasting", add:true, m:"2562 State St, Carlsbad · cold brew for the drive inland", q:"Steady State Roasting, 2562 State St, Carlsbad"},
+   {t:"11:35am", z:"PT", at:"2026-10-24T11:35:00-07:00", h:"Drive to Rancho Bernardo", add:true, m:"About 30–40 min inland via SR-78 and I-15 · eat at the turn · Sandy drives, Pat runs the camera",
+    shot:"Mount the Action 6 on the cart frame and test the mic in the parking lot, not on the 3rd tee."},
+   {t:"12:20pm", z:"PT", at:"2026-10-24T12:20:00-07:00", end:"2026-10-24T16:50:00-07:00", h:"Golf at the Country Club of Rancho Bernardo", m:"12280 Greens East Rd, San Diego · guest fees $130 each · 858-487-1134", q:"Country Club of Rancho Bernardo, 12280 Greens East Rd, San Diego", big:true,
+    shot:"Action 6 rolling before you reach each tee, clap once to mark a moment. Get: first tee from behind (never posed), Sandy’s best swing, Pat’s worst shot (non-negotiable), an FBB ball dropping at 240fps on the phone. Static wide on the prettiest hole. Ask the cart guy the day-off question. Verdict on 18, out loud: birdie or bogey. Stories 3 and 4."},
+   {t:"4:50pm", z:"PT", at:"2026-10-24T16:50:00-07:00", h:"Drive to Coronado", add:true, m:"About 40 min via I-15, SR-163 and the Coronado Bridge · don’t describe the Del to Sandy in the car",
+    shot:"Action 6 on the windshield for the bridge, bay and skyline on the right. Nobody talks over it. Story 5."},
+   {t:"5:45pm", z:"PT", at:"2026-10-24T17:45:00-07:00", h:"Coronado at sunset", m:"Hotel del Coronado grounds and beach, 1500 Orange Ave · sunset around 6", q:"Hotel del Coronado, 1500 Orange Ave, Coronado",
+    shot:"Sandy’s First Look. Pocket 3 rolling on her face as you come around to the turrets; her reaction, not the building. Then the ten-second wide of the turrets and the beach wide. One candid of the two of you. Story 6."},
+   {t:"6:10pm", z:"PT", at:"2026-10-24T18:10:00-07:00", h:"One drink on the Babcock & Story Bar patio", add:true, m:"Inside the Del, ocean-facing patio · bourbon in frame", q:"Babcock & Story Bar, 1500 Orange Ave, Coronado",
+    shot:"Phone: the glass on the rail with the afterglow behind it. Verdict on the Del, one line each."},
+   {t:"7:00pm", z:"PT", at:"2026-10-24T19:00:00-07:00", h:"Skyline at the Coronado Ferry Landing", add:true, m:"Centennial Park next to the landing · downtown lit up across the bay · 15–20 min to dinner", q:"Coronado Ferry Landing, Coronado",
+    shot:"Ten-second static wide of the skyline at blue hour, tripod on the rail. Story 7."},
+   {t:"8:00pm", z:"PT", at:"2026-10-24T20:00:00-07:00", h:"Dinner at Island Prime", m:"880 Harbor Island Dr, San Diego · party of 2, standard seating · 619-298-6802", q:"Island Prime, 880 Harbor Island Dr, San Diego", conf:"Confirmed",
+    shot:"One phone shot of the table with the city behind it, then phones down. Back at the hotel: dump and charge, cut the Rancho Bernardo reel, post it before bed."}
+  ],
+  posts:[
+   {fmt:"Instagram Stories", when:"Live, through the day", title:"Saturday in seven frames",
+    list:["Lola’s from the lot. “Wedding recovery plan.”","Seawall wide, Sandy ahead. Poll: “Who plays better on four hours of sleep?” Pat / Sandy","First tee at Rancho Bernardo. “12:20 tee time. Nobody stretched.”","The walk off 18. Answer the poll.","The bridge from the passenger seat.","Sandy at the turrets, reaction only.","The skyline from the Ferry Landing."]},
+   {fmt:"Reel · TikTok · YouTube Shorts", when:"Post Sat night, before bed", title:"The day after the wedding",
+    hook:"Danced until 11. Tee time at 12:20.",
+    lbl:"On-screen beats",
+    list:["“Danced until 11.” (the two of you walking in dressed Friday, no guests)","“Tee time 12:20.” (pulling into the lot)","“Sandy: fine.” (her best swing)","“Pat: not fine.” (your worst shot)","The verdict, both of you, on 18","End card: Play loud. Stay married."],
+    cap:"Ethan got married Friday night at the Flower Fields and we closed the dance floor. Saturday we drove inland to Rancho Bernardo for a 12:20 tee time, which felt like a great idea when we booked it.\n\nSandy played like she slept eight hours. I played like I slept four.\n\nVerdict: [birdie or bogey], because [one line].\n\nPlay loud. Stay married.",
+    tags:"#couplesgolf #golftravel #sandiegogolf #emptynesters #forebirdiesorbogeys"},
+   {fmt:"Instagram + Facebook carousel", when:"Post Sun night, before bed", title:"Coronado at golden hour",
+    lbl:"Slides",
+    list:["The Del’s turrets against the sky, script title “Coronado at golden hour”","Sandy’s first look, a still from the reaction","Beach wide, horizon kept","Bourbon on the Babcock & Story rail","Skyline from the Ferry Landing at blue hour","Island Prime, the city behind the table"],
+    cap:"Post-round plan: drive straight to the Hotel del Coronado and act like we were staying there. Nobody checked.\n\nOne bourbon on the patio while the sun went down, then across the island to the Ferry Landing for the skyline, then dinner on Harbor Island with the whole city lit up across the bay.\n\nThirty-six years in and she still lets me pick the bar.\n\nPlay loud. Stay married.",
+    tags:"#coronado #hoteldelcoronado #sandiego #couplestravel #forebirdiesorbogeys"},
+   {fmt:"Where Do You Eat? · Short", when:"Post whenever you’ve actually gone", title:"We asked at Lola’s",
+    hook:"We asked the burrito counter where they eat on their day off.",
+    list:["The ask at Lola’s counter, their answer in full","Go that weekend if it’s on the route. The reel is you actually going.","Exterior, door, first ten seconds, hands, first bite, Sandy’s face","If it isn’t on the route, bank the answer for the next San Diego run and say so on camera"]}
   ]},
- {id:"sun", dow:"Sun", n:"25", title:"Sunday, Oct 25", where:"Torrey Pines and La Jolla", c:"--ocean",
+ {id:"sun", dow:"Sun", n:"25", title:"Sunday, Oct 25", where:"Torrey Pines and La Jolla", c:"--ocean", social:true,
   stay:["Extra night at Fairfield Carlsbad", "Separate booking, Oct 25–26 · #26BXE18SLM"],
+  hook:"In August we played the copies. Today we play the real one.",
+  hookNote:"Tour 18 was famous holes in the wrong state. Torrey Pines is the real thing, where the pros play every winter, and you’re walking it. Close the day with Two Days Here: San Diego at the Cove.",
+  cams:"Pocket 3 in hand · Action 6 clipped to the bag · phone for stills · drone in the bag",
   items:[
-   {t:"8:15am", z:"PT", at:"2026-10-25T08:15:00-07:00", h:"Hotel breakfast, then the front desk", m:"Ask them to link #7K15Z12AO7 and #26BXE18SLM so you keep the room, and add Sandy to both. If not, hold the bags."},
-   {t:"9:54am", z:"PT", at:"2026-10-25T09:54:00-07:00", big:true, h:"Golf at Torrey Pines", m:"11480 N Torrey Pines Rd, La Jolla · 18 holes, walking · $408 · pro shop 858-452-3226", conf:"#TTID_1021154858ugmo1", q:"Torrey Pines Golf Course, 11480 N Torrey Pines Rd, La Jolla, CA 92037"},
-   {t:"3:00pm", z:"PT", at:"2026-10-25T15:00:00-07:00", h:"Torrey Pines Gliderport", m:"2800 Torrey Pines Scenic Dr · paragliders over the cliffs, small café", q:"Torrey Pines Gliderport, 2800 Torrey Pines Scenic Dr, La Jolla, CA"},
-   {t:"4:00pm", z:"PT", at:"2026-10-25T16:00:00-07:00", h:"The Taco Stand", m:"621 Pearl St, La Jolla · share a few, dinner is at 7:45", q:"The Taco Stand, 621 Pearl St, La Jolla, CA"},
-   {t:"4:45pm", z:"PT", at:"2026-10-25T16:45:00-07:00", h:"La Jolla Village stroll", m:"Girard Ave and Prospect St, down to the Cove", q:"Girard Ave & Prospect St, La Jolla, CA"},
-   {t:"5:00pm", z:"PT", at:"2026-10-25T17:00:00-07:00", h:"La Jolla Cove at sunset", m:"1100 Coast Blvd · sea lions toward Children’s Pool · stay until about 7:10", q:"La Jolla Cove, 1100 Coast Blvd, La Jolla, CA"},
-   {t:"7:45pm", z:"PT", at:"2026-10-25T19:45:00-07:00", h:"Dinner at Nick’s on State", m:"2742 State St, Carlsbad · party of 2 · 760-696-3593", conf:"Confirmed", q:"Nick's on State, 2742 State St, Carlsbad, CA 92008"},
-   {t:"9:15pm", z:"PT", at:"2026-10-25T21:15:00-07:00", h:"Handel’s ice cream", m:"2825 State St, a short walk from Nick’s · open until 10 · pack tonight", q:"Handel's Homemade Ice Cream, 2825 State St, Carlsbad, CA"}
+   {t:"8:15am", z:"PT", at:"2026-10-25T08:15:00-07:00", h:"Hotel breakfast, then the front desk", m:"Ask them to link #7K15Z12AO7 and #26BXE18SLM so you keep the room, and add Sandy to both. If not, hold the bags.",
+    shot:"Ask the desk the day-off question while they link the rooms."},
+   {t:"8:50am", z:"PT", at:"2026-10-25T08:50:00-07:00", h:"Drive to Torrey Pines", add:true, m:"About 25 min down I-5 · leaves time for the putting green",
+    shot:"Action 6 on the windshield. Story 1: “In August we played the copies.”"},
+   {t:"9:54am", z:"PT", at:"2026-10-25T09:54:00-07:00", end:"2026-10-25T14:50:00-07:00", h:"Golf at Torrey Pines", m:"11480 N Torrey Pines Rd, La Jolla · 18 holes, walking · $408 · pro shop 858-452-3226", q:"Torrey Pines Golf Course, 11480 N Torrey Pines Rd, La Jolla", conf:"#TTID_1021154858ugmo1", big:true,
+    shot:"Shoot the arrival: Pocket 3 rolling from the lot to the first tee. Mic on Pat, windscreen on. Static wide on the first ocean hole and on 18. Sandy’s tee shot from behind on a cliff hole. The honest shots: shoes on the walk, the step count at 18. Ask the starter or the next group the day-off question. Verdict on 18, both of you, and disagree if you disagree. Stories 2 and 3."},
+   {t:"2:50pm", z:"PT", at:"2026-10-25T14:50:00-07:00", h:"One at The Grill, Lodge at Torrey Pines", add:true, m:"Patio with fire pits overlooking the course · bar opens 10:30am · 20 minutes, then the Gliderport", q:"The Grill at The Lodge at Torrey Pines, 11480 N Torrey Pines Rd, La Jolla",
+    shot:"Glass on the table, course behind it. If the verdict on 18 got rushed, redo it here sitting down."},
+   {t:"3:15pm", z:"PT", at:"2026-10-25T15:15:00-07:00", h:"Torrey Pines Gliderport", m:"2800 Torrey Pines Scenic Dr · paragliders over the cliffs, small café · moved from 3:00 for the Grill stop", q:"Torrey Pines Gliderport, 2800 Torrey Pines Scenic Dr, La Jolla",
+    shot:"Sandy’s First Look, round two. Walk her to the edge without saying what’s there; Pocket 3 on her face as the first glider launches. Ten-second wide off the cliff. Story 4."},
+   {t:"4:00pm", z:"PT", at:"2026-10-25T16:00:00-07:00", h:"The Taco Stand", m:"621 Pearl St, La Jolla · share a few, dinner is at 7:45", q:"The Taco Stand, 621 Pearl St, La Jolla",
+    shot:"Five-shot rule: exterior, the counter, the hands, first bite, Sandy’s face. Count the tacos for the caption."},
+   {t:"4:45pm", z:"PT", at:"2026-10-25T16:45:00-07:00", h:"La Jolla Village stroll", m:"Girard Ave and Prospect St, down to the Cove", q:"Girard Ave and Prospect St, La Jolla",
+    shot:"Pocket 3 flipped vertical, face-track on, walk-and-talk down to the water."},
+   {t:"5:00pm", z:"PT", at:"2026-10-25T17:00:00-07:00", h:"La Jolla Cove at sunset", m:"1100 Coast Blvd · sea lions toward Children’s Pool · stay until about 7:10", q:"La Jolla Cove, 1100 Coast Blvd, La Jolla",
+    shot:"Two Days Here: San Diego. Sunset behind you, three things, sixty seconds, one take. Then the static wide of the sunset and ten seconds of sea lions doing nothing. Story 5."},
+   {t:"7:45pm", z:"PT", at:"2026-10-25T19:45:00-07:00", h:"Dinner at Nick’s on State", m:"2742 State St, Carlsbad · party of 2 · 760-696-3593", q:"Nick's on State, 2742 State St, Carlsbad", conf:"Confirmed"},
+   {t:"9:15pm", z:"PT", at:"2026-10-25T21:15:00-07:00", h:"Handel’s ice cream", m:"2825 State St, a short walk from Nick’s · open until 10 · pack tonight", q:"Handel's Ice Cream, 2825 State St, Carlsbad",
+    shot:"Two cones, one stolen bite. Back at the hotel: dump and charge, post the Coronado carousel, lay the kit out. You’re up at 4:30."}
+  ],
+  posts:[
+   {fmt:"Instagram Stories", when:"Live, through the day", title:"Sunday in five frames",
+    list:["Windshield on I-5. “In August we played the copies.”","First tee with the ocean behind it.","Step count at 18.","Sandy at the Gliderport edge, reaction only.","Sea lions at the Cove. “Working harder than us.”"]},
+   {fmt:"Reel · TikTok · YouTube Shorts", when:"Post Mon about 1pm CT, from the room in Austin", title:"We played the real one",
+    hook:"In August we played copies of famous holes. This one’s real.",
+    lbl:"On-screen beats",
+    list:["“In August: Tour 18. The copies.” (one replica clip from Texas)","“Sunday: Torrey Pines. The real one.” (first tee wide)","“Walking. Both of us.” (shoes on the path)","“The view:” (best ocean hole, static wide)","“The rough:” (an honest bad lie)","Verdict on 18, both of you · End card: Play loud. Stay married."],
+    cap:"In August we played a Texas course built out of copies of famous holes, because we were never going to play the real ones.\n\nSunday we played a real one. Torrey Pines, walking, the morning after a wedding weekend. The cliffs are real. The ocean keeps showing up and you stop to stare and then you three-putt. Sandy outwalked me.\n\nVerdict: [birdie or bogey], because [one line].\n\nPlay loud. Stay married.",
+    tags:"#torreypines #golftravel #couplesgolf #emptynesters #forebirdiesorbogeys"},
+   {fmt:"YouTube main · 8–10 min", when:"Edit the week of Nov 2", title:"We’re in Our Sixties. We Walked Torrey Pines the Day After a Wedding.",
+    lbl:"Structure",
+    list:["Cold open: Torrey lot Sunday morning, Pat to camera, “we danced until eleven on Friday and we’re walking this”","The wedding in one shot, then Rancho Bernardo as the warm-up round","Sandy’s First Look at the Del, the bourbon, the skyline","Torrey Pines: arrival, the cliff holes, the walk, the wall around the back nine, uncleaned","The Grill, the Gliderport, the verdict sitting down","Close on Two Days Here: San Diego at the Cove","Title backups: “You’ll Never Play Augusta. Torrey Pines Is Open to Anyone.” · “Wedding Friday, 36 Holes by Sunday”"]},
+   {fmt:"Two Days Here · 60 sec", when:"Post Tue night CT, after Amplify", title:"Two days in San Diego, for couples who golf",
+    hook:"If you only had two days in San Diego, here’s what we’d do.",
+    lbl:"The three things, filmed at the Cove",
+    list:["Your pick, said at the Cove. Likely: Torrey Pines, walking.","Sandy’s pick. Likely: sunset at the Del with a drink on the patio.","The two of you agree on one. Likely: the Gliderport into tacos into the Cove at sunset."],
+    cap:"Two days in San Diego, for couples where at least one of you golfs. Save this one.\n\n1. [Pat’s pick]\n2. [Sandy’s pick]\n3. [the one you agreed on]\n\nPlay loud. Stay married.",
+    tags:"#sandiego #twodayshere #couplestravel #emptynesters #forebirdiesorbogeys"},
+   {fmt:"Instagram + Facebook carousel", when:"Post Wed on the flight home", title:"The rest of Sunday",
+    lbl:"Slides",
+    list:["Paraglider launching off the cliff, script title “After Torrey”","Sandy at the edge, a still from the reaction","Tacos overhead","Sea lions doing nothing","La Jolla Cove sunset, wide","Handel’s, two cones"],
+    cap:"After Torrey: paragliders launching off the cliff next door, tacos at The Taco Stand (we said we’d share a few, we did not), and sea lions at La Jolla Cove doing absolutely nothing and getting more views than we ever will.\n\nThen sunset, dinner back in Carlsbad, and ice cream when we should have been packing.\n\nA wedding Friday, two rounds, two sunsets. Good weekend to be married.\n\nPlay loud. Stay married.",
+    tags:"#lajolla #lajollacove #sandiego #couplestravel #forebirdiesorbogeys"},
+   {fmt:"After the trip", when:"By Fri Oct 30", title:"Close it out",
+    list:["Send every place that let you film inside a link to their footage within 48 hours of posting.","Torrey Pines course page for the site, same format as the other course pages. Write it while the round is fresh.","Warm no-ask notes to Visit Carlsbad and the San Diego Tourism Authority, with links to what you posted. Get the contact through their media pages, don’t guess an address.","Ship a reel a day from the backlog the week of Nov 2 while you edit the main."]}
   ]},
  {id:"mon", dow:"Mon", n:"26", title:"Monday, Oct 26", where:"San Diego to Austin", c:"--lilac",
   stay:["East Austin Hotel", "1108 East 6th St, Austin · Oct 26–28 · #5887SG148427 · Riad is #5887SG148428"],
@@ -153,75 +282,117 @@ const DAYS = [
    {t:"4:45am", z:"PT", at:"2026-10-26T04:45:00-07:00", h:"Check out and head to SAN", m:"Fairfield Carlsbad · #26BXE18SLM"},
    {t:"5:10am", z:"PT", at:"2026-10-26T05:10:00-07:00", h:"Return rental car at SAN", m:"Rental Car Center, then the shuttle to the terminal · refuel Sunday night", q:"San Diego International Airport Rental Car Center"},
    {t:"6:35am", z:"PT", at:"2026-10-26T06:35:00-07:00", h:"Southwest WN266, San Diego → Austin", m:"Nonstop · arrives 11:25am CT · seats 24B (Pat), 24C (Sandy)", conf:"#23JTZ2"},
-   {t:"Afternoon", z:"CT", at:"2026-10-26T15:00:00-05:00", h:"Check in at East Austin Hotel", m:"1108 East 6th St · King, Poolside Wing · $279 · parking $25/day · 737-205-8888", conf:"#5887SG148427", q:"East Austin Hotel, 1108 East 6th Street, Austin, TX 78702"}
+   {t:"Afternoon", z:"CT", at:"2026-10-26T13:00:00-05:00", h:"Check in at East Austin Hotel", m:"1108 East 6th St · King, Poolside Wing · $279 · parking $25/day · 737-205-8888", q:"East Austin Hotel, 1108 East 6th St, Austin", conf:"#5887SG148427",
+    shot:"Post the Torrey Pines Reel once you’re in the room."}
   ]},
  {id:"tue", dow:"Tue", n:"27", title:"Tuesday, Oct 27", where:"Austin", c:"--sage",
   items:[
-   {t:"9:00am", z:"CT", at:"2026-10-27T09:00:00-05:00", h:"Amplify Austin", m:"Conference runs until 6pm"},
-   {t:"11:10am", z:"CT", at:"2026-10-27T11:10:00-05:00", big:true, h:"Pat’s main stage panel", m:"Amplify Austin"},
-   {t:"7:00pm", z:"CT", at:"2026-10-27T19:00:00-05:00", h:"VIP dinner at Geraldine’s", m:"Until about 10pm", flag:"Not on calendar yet"}
+   {t:"9:00am", z:"CT", at:"2026-10-27T09:00:00-05:00", end:"2026-10-27T18:00:00-05:00", h:"Amplify Austin", m:"Conference runs until 6pm"},
+   {t:"11:10am", z:"CT", at:"2026-10-27T11:10:00-05:00", h:"Pat’s main stage panel", m:"Amplify Austin", big:true},
+   {t:"7:00pm", z:"CT", at:"2026-10-27T19:00:00-05:00", end:"2026-10-27T22:00:00-05:00", h:"VIP dinner at Geraldine’s", flag:"Not on calendar yet", m:"Until about 10pm"}
   ]},
  {id:"wed", dow:"Wed", n:"28", title:"Wednesday, Oct 28", where:"Austin to Louisville", c:"--rose",
   items:[
-   {t:"9:35am", z:"CT", at:"2026-10-28T09:35:00-05:00", h:"Southwest 282 / 1385, Austin → Louisville", m:"Change planes in Dallas (DAL) · arrives 3:15pm ET · Pat 19C / 23C, Sandy 19B / 23B", conf:"#23GXV6"},
+   {t:"9:35am", z:"CT", at:"2026-10-28T09:35:00-05:00", h:"Southwest 282 / 1385, Austin → Louisville", m:"Change planes in Dallas (DAL) · arrives 3:15pm ET · Pat 19C / 23C, Sandy 19B / 23B", conf:"#23GXV6",
+    shot:"Post the La Jolla carousel from the plane."},
    {t:"3:15pm", z:"ET", at:"2026-10-28T15:15:00-04:00", h:"Home in Louisville", m:"SDF"}
   ]}
 ];
 
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const stripes = document.getElementById("stripes");
 const daysEl = document.getElementById("days");
 const flat = [];
 
 DAYS.forEach(d => {
   const li = document.createElement("li");
-  li.innerHTML = `<a href="#${d.id}" data-day="${d.id}" style="--c:var(${d.c})" aria-label="${d.title}"><span class="d">${d.dow}</span><span class="n">${d.n}</span></a>`;
+  li.innerHTML = `<a href="#${d.id}" data-day="${d.id}" style="--c:var(${d.c})" aria-label="${esc(d.title)}${d.social ? ', content day' : ''}">${d.social ? '<i class="cam" aria-hidden="true"></i>' : ''}<span class="d">${d.dow}</span><span class="n">${d.n}</span></a>`;
   stripes.appendChild(li);
 
   const s = document.createElement("section");
   s.className = "day"; s.id = d.id; s.style.setProperty("--c", `var(${d.c})`);
-  let html = `<div class="day-head"><h2>${d.title}</h2><span class="where">${d.where}</span></div>`;
-  if (d.stay) html += `<p class="stay">Staying: <b>${d.stay[0]}</b>, ${d.stay[1]}</p>`;
+  let html = `<div class="day-head"><h2>${esc(d.title)}</h2><span class="where">${esc(d.where)}</span></div>`;
+  if (d.stay) html += `<p class="stay">Staying: <b>${esc(d.stay[0])}</b>, ${esc(d.stay[1])}</p>`;
+  if (d.quiet) html += `<p class="quiet">${esc(d.quiet)}</p>`;
+  if (d.hook) html += `<div class="dayhook"><p class="k">Today’s hook</p><p class="t">${esc(d.hook)}</p>${d.hookNote ? `<p class="s">${esc(d.hookNote)}</p>` : ''}${d.cams ? `<p class="cams"><b>Cameras:</b> ${esc(d.cams)}</p>` : ''}</div>`;
   html += `<ul class="items">`;
   d.items.forEach((it, i) => {
-    const key = d.id + "-" + i;
+    const key = `${d.id}-${i}`;
     flat.push({...it, key, day:d});
-    html += `<li class="item${it.big ? " big" : ""}" data-key="${key}">
-      <div class="time">${it.t}<small>${it.z}</small></div>
+    html += `<li class="item${it.big ? ' big' : ''}" data-key="${key}">
+      <div class="time">${esc(it.t)}<small>${esc(it.z)}</small></div>
       <div>
-        <h3>${it.h}${it.flag ? ` <span class="flag">${it.flag}</span>` : ""}</h3>
-        ${it.m ? `<p class="meta">${it.m}</p>` : ""}
-        ${it.q ? `<a class="map" href="${maps(it.q)}" target="_blank" rel="noopener">Open in Maps</a>` : ""}
-        ${it.conf ? `<span class="conf">${it.conf}</span>` : ""}
+        <h3>${esc(it.h)}${it.add ? '<span class="add">Add</span>' : ''}${it.flag ? `<span class="flag">${esc(it.flag)}</span>` : ''}</h3>
+        ${it.m ? `<p class="meta">${esc(it.m)}</p>` : ''}
+        ${it.q ? `<a class="map" href="${maps(it.q)}" target="_blank" rel="noopener">Open in Maps</a>` : ''}
+        ${it.conf ? `<span class="conf">${esc(it.conf)}</span>` : ''}
+        ${it.shot ? `<p class="shot"><b>Capture</b>${esc(it.shot)}</p>` : ''}
       </div></li>`;
   });
   html += `</ul>`;
+
+  if (d.posts) {
+    html += `<div class="social"><div class="social-head"><h3>Posts from ${esc(d.title.split(",")[0])}</h3><span>${d.posts.length} pieces</span></div>`;
+    d.posts.forEach((p, i) => {
+      html += `<article class="post">
+        <div class="top"><span class="fmt">${esc(p.fmt)}</span><span class="when">${esc(p.when)}</span></div>
+        <h4>${esc(p.title)}</h4>
+        ${p.hook ? `<p class="hook"><i>Hook</i>${esc(p.hook)}</p>` : ''}
+        ${p.list ? `${p.lbl ? `<p class="lbl">${esc(p.lbl)}</p>` : ''}<ol>${p.list.map(x => `<li>${esc(x)}</li>`).join("")}</ol>` : ''}
+        ${p.cap ? `<p class="lbl">Caption</p><p class="cap">${esc(p.cap)}</p>${p.tags ? `<p class="tags">${esc(p.tags)}</p>` : ''}<button type="button" data-copy="${d.id}-${i}">Copy caption</button>` : ''}
+      </article>`;
+    });
+    html += `</div>`;
+  }
   s.innerHTML = html;
   daysEl.appendChild(s);
 });
 
+document.addEventListener("click", e => {
+  const b = e.target.closest("button[data-copy]");
+  if (!b) return;
+  const [id, i] = b.dataset.copy.split("-");
+  const p = DAYS.find(d => d.id === id).posts[+i];
+  const text = p.cap + (p.tags ? "\n\n" + p.tags : "");
+  const done = () => { b.textContent = "Copied"; setTimeout(() => b.textContent = "Copy caption", 1600); };
+  try {
+    navigator.clipboard.writeText(text).then(done, () => fallback());
+  } catch (err) { fallback(); }
+  function fallback(){
+    const ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); done(); } catch (e2) {}
+    ta.remove();
+  }
+});
+
 function refresh(){
-  const now = Date.now();
-  let next = null;
+  const now = new Date();
+  let nextIt = null;
   flat.forEach(it => {
     const el = document.querySelector(`[data-key="${it.key}"]`);
-    const end = it.end ? Date.parse(it.end) : Date.parse(it.at) + 60*60*1000;
+    const start = new Date(it.at);
+    const end = it.end ? new Date(it.end) : new Date(start.getTime() + 60*60*1000);
     el.classList.toggle("is-past", end < now);
     el.classList.remove("is-next");
-    if (!next && end >= now) next = it;
+    if (!nextIt && start > now) nextIt = it;
   });
   const box = document.getElementById("next");
-  if (next){
-    document.querySelector(`[data-key="${next.key}"]`).classList.add("is-next");
-    const started = Date.parse(next.at) <= now;
-    document.getElementById("nextK").textContent = started ? "Happening now" : "Up next";
-    document.getElementById("nextT").textContent = next.h;
-    document.getElementById("nextS").textContent = `${next.day.title} at ${next.t} ${next.z}`;
-    box.style.setProperty("--nc", `var(${next.day.c})`);
+  if (nextIt) {
+    document.querySelector(`[data-key="${nextIt.key}"]`).classList.add("is-next");
+    const mins = Math.round((new Date(nextIt.at) - now) / 60000);
+    const rel = mins < 60 ? `in ${mins} min` : mins < 1440 ? `in ${Math.floor(mins/60)}h ${mins%60}m` : nextIt.day.title;
+    document.getElementById("nextK").textContent = `Up next · ${rel}`;
+    document.getElementById("nextT").textContent = nextIt.h;
+    document.getElementById("nextS").textContent = `${nextIt.t} ${nextIt.z}${nextIt.m ? " · " + nextIt.m : ""}`;
+    box.style.setProperty("--nc", `var(${nextIt.day.c})`);
     box.hidden = false;
-    document.querySelectorAll(".fields a").forEach(a => a.setAttribute("aria-current", a.dataset.day === next.day.id ? "true" : "false"));
-  } else {
-    box.hidden = true;
-  }
+  } else box.hidden = true;
+
+  const local = new Intl.DateTimeFormat("en-CA", {timeZone: "America/Los_Angeles"}).format(now);
+  document.querySelectorAll(".fields a").forEach(a => {
+    const d = DAYS.find(x => x.id === a.dataset.day);
+    a.setAttribute("aria-current", d.items[0].at.slice(0,10) === local ? "true" : "false");
+  });
 }
 refresh();
 setInterval(refresh, 60000);
