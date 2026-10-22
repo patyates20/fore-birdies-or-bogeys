@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pat & Sandy · Carlsbad wedding + Austin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F6F8; --surface:#FFFFFF; --ink:#1F2A44; --muted:#5B6478; --line:#D9DFE6;
+  --coral:#E8546B; --marigold:#E89A2C; --lilac:#8E6FC0; --ocean:#2F7F96; --sage:#5E8F5E; --rose:#D46A9F; --slate:#4F6D8A;
+  --warn-bg:#FFF1E0; --warn-ink:#7A4A0C;
+  --serif:"Gloock", Georgia, "Times New Roman", serif;
+  --sans:"Outfit", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121722; --surface:#1B2230; --ink:#E9EDF4; --muted:#A3ACBE; --line:#2C3546;
+    --coral:#F2748A; --marigold:#F2B254; --lilac:#AE92DE; --ocean:#5DB0C7; --sage:#86B886; --rose:#E68BB8; --slate:#86A3C2;
+    --warn-bg:#3A2A14; --warn-ink:#F6CD94;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121722; --surface:#1B2230; --ink:#E9EDF4; --muted:#A3ACBE; --line:#2C3546;
+  --coral:#F2748A; --marigold:#F2B254; --lilac:#AE92DE; --ocean:#5DB0C7; --sage:#86B886; --rose:#E68BB8; --slate:#86A3C2;
+  --warn-bg:#3A2A14; --warn-ink:#F6CD94;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:0 18px 64px}
+
+header.hero{padding:28px 0 8px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,8vw,52px);line-height:1.02;margin:0 0 10px;letter-spacing:-.01em}
+.hero p{margin:0;color:var(--muted);font-size:16px}
+
+/* The memorable element: day stripes, like the rows at the Flower Fields */
+nav.fields{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:14px 0 12px;margin:0 -18px;padding-left:18px;padding-right:18px}
+.fields ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.fields a{display:flex;flex-direction:column;justify-content:flex-end;height:54px;border-radius:6px;padding:6px 7px;text-decoration:none;color:#fff;background:var(--c);position:relative;overflow:hidden}
+.fields a::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.0) 0 7px,rgba(255,255,255,.14) 7px 9px);pointer-events:none}
+.fields .d{font-size:12px;opacity:.92;line-height:1}
+.fields .n{font-family:var(--serif);font-size:22px;line-height:1}
+.fields a[aria-current="true"]{outline:3px solid var(--ink);outline-offset:2px}
+.fields a:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+
+.next{margin:18px 0 6px;background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--nc,var(--ocean));border-radius:10px;padding:14px 16px}
+.next .k{font-size:13px;color:var(--muted);margin:0 0 2px}
+.next .t{font-family:var(--serif);font-size:22px;margin:0;line-height:1.15}
+.next .s{margin:4px 0 0;color:var(--muted);font-size:14px}
+
+.alert{background:var(--warn-bg);color:var(--warn-ink);border-radius:10px;padding:12px 14px;margin:14px 0 0;font-size:15px}
+.alert strong{font-weight:600}
+
+section.day{margin-top:34px}
+.day-head{display:flex;align-items:baseline;gap:12px;border-bottom:4px solid var(--c);padding-bottom:8px;margin-bottom:6px}
+.day-head h2{font-family:var(--serif);font-weight:400;font-size:30px;margin:0;line-height:1}
+.day-head .where{color:var(--muted);font-size:15px}
+.stay{font-size:14px;color:var(--muted);margin:8px 0 4px}
+.stay b{color:var(--ink);font-weight:600}
+
+ul.items{list-style:none;margin:0;padding:0}
+li.item{display:grid;grid-template-columns:86px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+li.item:last-child{border-bottom:0}
+.time{font-variant-numeric:tabular-nums;font-weight:600;font-size:15px;line-height:1.3}
+.time small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.item h3{margin:0;font-size:17px;font-weight:600;line-height:1.3}
+.item .meta{margin:3px 0 0;color:var(--muted);font-size:14.5px}
+.item .conf{display:inline-block;margin-top:6px;font-size:13.5px;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:2px 8px}
+.item .map{display:inline-block;margin-top:6px;margin-right:8px;font-size:14px;color:var(--c);font-weight:500}
+li.item.big{background:linear-gradient(90deg, color-mix(in srgb, var(--c) 14%, transparent), transparent 70%);margin:6px -10px;padding:16px 10px;border-radius:10px;border-bottom:0}
+li.item.big h3{font-family:var(--serif);font-weight:400;font-size:24px}
+li.item.is-next .time{color:var(--c)}
+li.item.is-past{opacity:.55}
+.flag{color:var(--warn-ink);background:var(--warn-bg);border-radius:6px;padding:1px 6px;font-size:13px;font-weight:500;margin-left:4px;white-space:nowrap}
+
+footer{margin-top:40px;color:var(--muted);font-size:13.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <h1>Pat &amp; Sandy, west and back</h1>
+    <p>Ethan’s wedding in Carlsbad, a golf weekend, then Amplify in Austin. Oct 22–28. Every time is shown in the local time where you’ll be.</p>
+  </header>
+
+  <nav class="fields" aria-label="Trip days">
+    <ol id="stripes"></ol>
+  </nav>
+
+  <div class="next" id="next" hidden>
+    <p class="k" id="nextK">Up next</p>
+    <p class="t" id="nextT"></p>
+    <p class="s" id="nextS"></p>
+  </div>
+
+
+  <main id="days"></main>
+
+  <footer>Built from your confirmations and calendar. Golf and activity end times are estimates.</footer>
+</div>
+
+<script>
+const maps = q => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
+
+const DAYS = [
+ {id:"thu", dow:"Thu", n:"22", title:"Thursday, Oct 22", where:"Louisville to Carlsbad", c:"--slate",
+  stay:["Fairfield by Marriott Carlsbad", "1929 Palomar Oaks Way, Carlsbad · Oct 22–25 · #7K15Z12AO7"],
+  items:[
+   {t:"10:39am", z:"ET", at:"2026-10-22T10:39:00-04:00", h:"Delta DL5101, Louisville → Detroit", m:"Arrives 12:04pm ET, McNamara Terminal · CRJ-700 · Main Basic"},
+   {t:"12:35pm", z:"ET", at:"2026-10-22T12:35:00-04:00", h:"Delta DL761, Detroit → San Diego", m:"Arrives 2:20pm PT, Terminal 2 · A321 · 31 min connection"},
+   {t:"2:40pm", z:"PT", at:"2026-10-22T14:40:00-07:00", h:"Pick up rental car at SAN", m:"Midsize SUV, Nissan Rogue or similar · Driver: Sandra · 4 days, unlimited miles · Est. $601.14 at the counter · shuttle from Terminal 2", q:"San Diego International Airport Rental Car Center"},
+   {t:"3:00pm", z:"PT", at:"2026-10-22T15:00:00-07:00", h:"Check in at Fairfield Carlsbad", m:"1 King · free breakfast · parking $14/day", conf:"#7K15Z12AO7", q:"1929 Palomar Oaks Way, Carlsbad, CA 92011"}
+  ]},
+ {id:"fri", dow:"Fri", n:"23", title:"Friday, Oct 23", where:"Carlsbad", c:"--coral",
+  items:[
+   {t:"4:00pm", z:"PT", at:"2026-10-23T16:00:00-07:00", end:"2026-10-23T23:00:00-07:00", big:true, h:"Ethan’s wedding", m:"The Flower Fields, 5704 Paseo Del Norte, Carlsbad · until about 11pm · 5–10 min from the hotel", q:"The Flower Fields, 5704 Paseo Del Norte, Carlsbad, CA 92008"}
+  ]},
+ {id:"sat", dow:"Sat", n:"24", title:"Saturday, Oct 24", where:"Carlsbad, Rancho Bernardo, Coronado", c:"--marigold",
+  items:[
+   {t:"8:30am", z:"PT", at:"2026-10-24T08:30:00-07:00", h:"Breakfast burritos at Lola’s", m:"3292 Roosevelt St, Carlsbad · opens 8am", q:"Lola's 7 Up Market & Deli, 3292 Roosevelt St, Carlsbad, CA"},
+   {t:"9:30am", z:"PT", at:"2026-10-24T09:30:00-07:00", h:"Carlsbad seawall walk", m:"Start at Tamarack Ave & Carlsbad Blvd, head north toward the Village", q:"Tamarack Surf Beach, Carlsbad, CA"},
+   {t:"12:20pm", z:"PT", at:"2026-10-24T12:20:00-07:00", big:true, h:"Golf at the Country Club of Rancho Bernardo", m:"12280 Greens East Rd, San Diego · guest fees $130 each · 858-487-1134", q:"The Country Club of Rancho Bernardo, 12280 Greens East Rd, San Diego, CA 92128"},
+   {t:"5:45pm", z:"PT", at:"2026-10-24T17:45:00-07:00", h:"Coronado at sunset", m:"Hotel del Coronado grounds and beach, 1500 Orange Ave · sunset around 6", q:"Hotel del Coronado, 1500 Orange Ave, Coronado, CA 92118"},
+   {t:"8:00pm", z:"PT", at:"2026-10-24T20:00:00-07:00", h:"Dinner at Island Prime", m:"880 Harbor Island Dr, San Diego · party of 2, standard seating · 619-298-6802", conf:"Confirmed", q:"Island Prime, 880 Harbor Island Dr, San Diego, CA 92101"}
+  ]},
+ {id:"sun", dow:"Sun", n:"25", title:"Sunday, Oct 25", where:"Torrey Pines and La Jolla", c:"--ocean",
+  stay:["Extra night at Fairfield Carlsbad", "Separate booking, Oct 25–26 · #26BXE18SLM"],
+  items:[
+   {t:"8:15am", z:"PT", at:"2026-10-25T08:15:00-07:00", h:"Hotel breakfast, then the front desk", m:"Ask them to link #7K15Z12AO7 and #26BXE18SLM so you keep the room, and add Sandy to both. If not, hold the bags."},
+   {t:"9:54am", z:"PT", at:"2026-10-25T09:54:00-07:00", big:true, h:"Golf at Torrey Pines", m:"11480 N Torrey Pines Rd, La Jolla · 18 holes, walking · $408 · pro shop 858-452-3226", conf:"#TTID_1021154858ugmo1", q:"Torrey Pines Golf Course, 11480 N Torrey Pines Rd, La Jolla, CA 92037"},
+   {t:"3:00pm", z:"PT", at:"2026-10-25T15:00:00-07:00", h:"Torrey Pines Gliderport", m:"2800 Torrey Pines Scenic Dr · paragliders over the cliffs, small café", q:"Torrey Pines Gliderport, 2800 Torrey Pines Scenic Dr, La Jolla, CA"},
+   {t:"4:00pm", z:"PT", at:"2026-10-25T16:00:00-07:00", h:"The Taco Stand", m:"621 Pearl St, La Jolla · share a few, dinner is at 7:45", q:"The Taco Stand, 621 Pearl St, La Jolla, CA"},
+   {t:"4:45pm", z:"PT", at:"2026-10-25T16:45:00-07:00", h:"La Jolla Village stroll", m:"Girard Ave and Prospect St, down to the Cove", q:"Girard Ave & Prospect St, La Jolla, CA"},
+   {t:"5:00pm", z:"PT", at:"2026-10-25T17:00:00-07:00", h:"La Jolla Cove at sunset", m:"1100 Coast Blvd · sea lions toward Children’s Pool · stay until about 7:10", q:"La Jolla Cove, 1100 Coast Blvd, La Jolla, CA"},
+   {t:"7:45pm", z:"PT", at:"2026-10-25T19:45:00-07:00", h:"Dinner at Nick’s on State", m:"2742 State St, Carlsbad · party of 2 · 760-696-3593", conf:"Confirmed", q:"Nick's on State, 2742 State St, Carlsbad, CA 92008"},
+   {t:"9:15pm", z:"PT", at:"2026-10-25T21:15:00-07:00", h:"Handel’s ice cream", m:"2825 State St, a short walk from Nick’s · open until 10 · pack tonight", q:"Handel's Homemade Ice Cream, 2825 State St, Carlsbad, CA"}
+  ]},
+ {id:"mon", dow:"Mon", n:"26", title:"Monday, Oct 26", where:"San Diego to Austin", c:"--lilac",
+  stay:["East Austin Hotel", "1108 East 6th St, Austin · Oct 26–28 · #5887SG148427 · Riad is #5887SG148428"],
+  items:[
+   {t:"4:45am", z:"PT", at:"2026-10-26T04:45:00-07:00", h:"Check out and head to SAN", m:"Fairfield Carlsbad · #26BXE18SLM"},
+   {t:"5:10am", z:"PT", at:"2026-10-26T05:10:00-07:00", h:"Return rental car at SAN", m:"Rental Car Center, then the shuttle to the terminal · refuel Sunday night", q:"San Diego International Airport Rental Car Center"},
+   {t:"6:35am", z:"PT", at:"2026-10-26T06:35:00-07:00", h:"Southwest WN266, San Diego → Austin", m:"Nonstop · arrives 11:25am CT · seats 24B (Pat), 24C (Sandy)", conf:"#23JTZ2"},
+   {t:"Afternoon", z:"CT", at:"2026-10-26T15:00:00-05:00", h:"Check in at East Austin Hotel", m:"1108 East 6th St · King, Poolside Wing · $279 · parking $25/day · 737-205-8888", conf:"#5887SG148427", q:"East Austin Hotel, 1108 East 6th Street, Austin, TX 78702"}
+  ]},
+ {id:"tue", dow:"Tue", n:"27", title:"Tuesday, Oct 27", where:"Austin", c:"--sage",
+  items:[
+   {t:"9:00am", z:"CT", at:"2026-10-27T09:00:00-05:00", h:"Amplify Austin", m:"Conference runs until 6pm"},
+   {t:"11:10am", z:"CT", at:"2026-10-27T11:10:00-05:00", big:true, h:"Pat’s main stage panel", m:"Amplify Austin"},
+   {t:"7:00pm", z:"CT", at:"2026-10-27T19:00:00-05:00", h:"VIP dinner at Geraldine’s", m:"Until about 10pm", flag:"Not on calendar yet"}
+  ]},
+ {id:"wed", dow:"Wed", n:"28", title:"Wednesday, Oct 28", where:"Austin to Louisville", c:"--rose",
+  items:[
+   {t:"9:35am", z:"CT", at:"2026-10-28T09:35:00-05:00", h:"Southwest 282 / 1385, Austin → Louisville", m:"Change planes in Dallas (DAL) · arrives 3:15pm ET · Pat 19C / 23C, Sandy 19B / 23B", conf:"#23GXV6"},
+   {t:"3:15pm", z:"ET", at:"2026-10-28T15:15:00-04:00", h:"Home in Louisville", m:"SDF"}
+  ]}
+];
+
+const stripes = document.getElementById("stripes");
+const daysEl = document.getElementById("days");
+const flat = [];
+
+DAYS.forEach(d => {
+  const li = document.createElement("li");
+  li.innerHTML = `<a href="#${d.id}" data-day="${d.id}" style="--c:var(${d.c})" aria-label="${d.title}"><span class="d">${d.dow}</span><span class="n">${d.n}</span></a>`;
+  stripes.appendChild(li);
+
+  const s = document.createElement("section");
+  s.className = "day"; s.id = d.id; s.style.setProperty("--c", `var(${d.c})`);
+  let html = `<div class="day-head"><h2>${d.title}</h2><span class="where">${d.where}</span></div>`;
+  if (d.stay) html += `<p class="stay">Staying: <b>${d.stay[0]}</b>, ${d.stay[1]}</p>`;
+  html += `<ul class="items">`;
+  d.items.forEach((it, i) => {
+    const key = d.id + "-" + i;
+    flat.push({...it, key, day:d});
+    html += `<li class="item${it.big ? " big" : ""}" data-key="${key}">
+      <div class="time">${it.t}<small>${it.z}</small></div>
+      <div>
+        <h3>${it.h}${it.flag ? ` <span class="flag">${it.flag}</span>` : ""}</h3>
+        ${it.m ? `<p class="meta">${it.m}</p>` : ""}
+        ${it.q ? `<a class="map" href="${maps(it.q)}" target="_blank" rel="noopener">Open in Maps</a>` : ""}
+        ${it.conf ? `<span class="conf">${it.conf}</span>` : ""}
+      </div></li>`;
+  });
+  html += `</ul>`;
+  s.innerHTML = html;
+  daysEl.appendChild(s);
+});
+
+function refresh(){
+  const now = Date.now();
+  let next = null;
+  flat.forEach(it => {
+    const el = document.querySelector(`[data-key="${it.key}"]`);
+    const end = it.end ? Date.parse(it.end) : Date.parse(it.at) + 60*60*1000;
+    el.classList.toggle("is-past", end < now);
+    el.classList.remove("is-next");
+    if (!next && end >= now) next = it;
+  });
+  const box = document.getElementById("next");
+  if (next){
+    document.querySelector(`[data-key="${next.key}"]`).classList.add("is-next");
+    const started = Date.parse(next.at) <= now;
+    document.getElementById("nextK").textContent = started ? "Happening now" : "Up next";
+    document.getElementById("nextT").textContent = next.h;
+    document.getElementById("nextS").textContent = `${next.day.title} at ${next.t} ${next.z}`;
+    box.style.setProperty("--nc", `var(${next.day.c})`);
+    box.hidden = false;
+    document.querySelectorAll(".fields a").forEach(a => a.setAttribute("aria-current", a.dataset.day === next.day.id ? "true" : "false"));
+  } else {
+    box.hidden = true;
+  }
+}
+refresh();
+setInterval(refresh, 60000);
+
+const h = (location.hash || "").slice(1);
+if (h && document.getElementById(h)) requestAnimationFrame(() => document.getElementById(h).scrollIntoView());
+</script>
+</body>
+</html>
